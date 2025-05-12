@@ -84,10 +84,10 @@ main section {
     display: flex;
     align-items: center;
 }
-main section div{
+main section div{ 
     justify-content: center;
     text-align: center;
-    margin-right: 75px;
+    
 }
 main section img {
 

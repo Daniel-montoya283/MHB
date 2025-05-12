@@ -21,7 +21,7 @@ form  {
 .input-grup {
     display: flex;
     flex-direction: column;
-    text-align: left;
+    
 }
 main h2 {
     color: bisque;
@@ -55,7 +55,22 @@ main input, textarea {
     background-color: black;
     color: yellow;
 }
-
+asd
 main input:placeholder, textarea:placeholder {
     color: rgb(216, 13, 206);
 }
+
+#557 {
+   
+    text-decoration: none;
+    
+    border-radius: 6px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+ #557:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
