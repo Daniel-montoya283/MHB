@@ -1,76 +1,86 @@
-
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
 
 body {
-    background-color: rgb(24, 22, 22);
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to right, #e2e2e2, #002828); 
+    color: #333; 
 }
-main {
-    width: 600px;
+
+.container {
+    margin: 0 15px;
 }
-form  {
-    padding: 50px 50px;
-    box-shadow: 0 0 20px rgb(244, 245, 245);
-    border-radius: 20px;
+.form-box {
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    background: #ffff;
+    border-radius: 18px;
+    box-shadow: 0 0 10px rgba(0, 0,0,0.1);
+    display: none;
+
+}
+.form-box.active {
+    display: block;
+}
+
+
+
+
+
+h2 {
+    font-size: 34px;
     text-align: center;
-    background-color: black;
-}
-.input-grup {
-    display: flex;
-    flex-direction: column;
-    
-}
-main h2 {
-    color: bisque;
-    font-size: 35px;
-}
-h3 {
-    color: white;
-}
-label {
-    color: rgba(255, 233, 207, 0.459);
-    font-size: 15px;
-    font-weight: 600;
-    margin-bottom: 15px;
-
-}
-main input, textarea {
-    padding: 17px 25px;
-    border-radius: 25px;
     margin-bottom: 20px;
-    background-color: RGB(0, 40, 40);
-    border: 2p solid #fff;
-    color:bisque;
-    outline: none;
 }
-
-.btnsubmit {
-  width: auto;
-
-}
-.btnform:hover {
-    background-color: black;
-    color: yellow;
-}
-asd
-main input:placeholder, textarea:placeholder {
-    color: rgb(216, 13, 206);
-}
-
-#557 {
-   
-    text-decoration: none;
-    
+input, select {
+    width: 100%;
+    padding: 12px;
+    background: #eee;
     border-radius: 6px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s, transform 0.2s;
-  }
-  
- #557:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-  }
-  
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #002828;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 20px;
+    transition: 0.5s;
+    
+}
+button:hover {
+    background: #eee;
+    color: #333;
+}
+
+p {
+    font-size: 17.5px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p a {
+    color: rgb(141, 170, 224);
+    text-decoration: none;
+}
+p a:hover {
+    
+}
+

@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+if (!isset($_SESSION['email'])) {
+  header("Location: /MHB/index.html");
+  exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,13 +33,13 @@
 
   <main>
     <nav>
-      <a href="Candidato.html"><button class="buttonP">Candidato</button></a>
+      <a href="Candidato.php"><button class="buttonP">Candidato</button></a>
       <a href="Administracion.html"><button class="buttonP">Administrador</button></a>
       <a href="P_influencer.html"><button class="buttonP">Influencer</button></a>
-      <a href="../CRUD/index.html"><button class="buttonP">Reclutador</button></a>
-      <a href="index.html"><button class="buttonP">Cerrar Sección</button></a>
+      <a href="../MHB/CRUD/index.html"><button class="buttonP">Reclutador</button></a>
+      <a href="index.html"><button onclick="window.location.href='/MHB/login/logout.php'" class="buttonP">Cerrar Sección</button></a>
     </nav>
-
+      <h1 class="user_title">Bienvenido, <span><?= $_SESSION['name']; ?></span></h1>
     <h2>Vacantes Disponibles</h2>
     <section class="job-listings">
       <div class="job-container">
