@@ -72,6 +72,7 @@ function isActiveForms($formName, $activeForm) {
                     <option value="">--Secciona un Rol--</option>
                     <option value="candidato">Candidato</option>
                     <option value="reclutador">Reclutador</option>
+                    <option value="influencer">Influencer</option>
                 </select>
                 <button type="submit" name="register">Register</button>
                 <p>Ya tienes una cuenta? <a href="Accesos1.php" onclick="showForm('login-form')">Iniciar Seccion</a></p>

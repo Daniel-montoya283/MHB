@@ -1,72 +1,158 @@
-/* body {
-    margin: 0;
+
+/*HEADER*/
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr auto; /* Una columna flexible y otra ajustada al contenido */
+    background-color: black;
+}
+#R {
+    color: black;
+    width: 1%;
 }
 
-main {
-    background-color: rgba(58, 52, 52, 0.178);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80vh;
+#blo1{
+    text-align: center; /* Asegura que el texto quede a la izquierda */
+    font-size: 9rem;
+    color: RGB(0, 40, 40);
 }
-h2 {
+
+#blo1 h1 {
+    margin-top: -9.64px;
+}
+
+#blo2 {
+    text-align: center; /* Asegura que el texto quede a la derecha */
+    color: bisque;
+    display: grid;
+}
+#blo2 h2{
+    margin-top: 10px;
+}   
+
+
+/*BARRA DE NAVEGACION */
+
+.buttonP {
+    background-color: transparent;
+    border: 1px solid gray;
+    color: gray;
+    font-size: 20px;
+    padding: 10px 40px;
+    cursor: pointer;
+    border-radius: 5px;
     text-align: center;
-    padding: 1rem;
+    display: inline-block;
+    margin: 16px;
+}
+.buttonP:hover {
+    background-color: black;
+    border: 1px solid green;
+    color: beige;
    
 }
-
-.container {
-    width: 80%;
-    max-width: 850px;
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff; /* Asegura que el fondo coincida */
+    padding: 10px; /* Ajusta según necesidad */
 }
 
-.card {
-    background: white;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 8px;
+/*MAIN*/
+
+main h1{
+    color:rgb(9, 46, 40);
+    font-weight: 400;
+}
+main {
+    background-color: rgba(58, 52, 52, 0.178);
+}
+main section {
+    display: flex;
+    align-items: center;
+}
+main section div{ 
+    justify-content: center;
+    text-align: center;
+    
+}
+main section img {
+
+    height: 22rem;
+    width: 54rem;
+    margin: 5rem;
+}
+
+/*FOOTER*/
+
+/* FOOTER */
+footer {
+    background-color: black;
+    padding: 2.7rem;
+    display: flex;
+    flex-direction: column; /* Apila los bloques verticalmente */
+    align-items: center; /* Centra el contenido */
+    padding-bottom: 0;
+}
+
+/* Primera fila con dos columnas */
+.footer-top {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.info h3 {
-    margin: 0;
-    font-size: 1.4em;
-    font-weight: bold;
-}
-
-.info p {
-    margin: 2px 0 0;
-    color: #6c757d;
-}
-
-.btn-outline {
-    background: white;
-    border: 1px solid #6c757d;
-    padding: 8px 22px;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-.btn-outline:hover {
-    background: black;
-    color: beige;
-}
-
-.btn-main {
     width: 100%;
-    background: #0c1323;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
+    flex-wrap: wrap; /* Para que sea responsive */
 }
 
-.btn-main:hover {
-    background: #171f34;
+/* Bloque 1 */
+.F_bloq1 {
+    background-color: black;
+    color: beige;
+    flex: 1;
+    min-width: 300px;
 }
- */
+.F_bloq1 a {
+    font-size: 20px;
+    text-decoration: none;
+    color: beige;
+    margin: 10px;
+}
+.F_bloq1 h4 {
+    text-align: center;
+}
+.F_bloq1 ul li a:hover {
+    color: rgb(4, 75, 63);
+}
+
+/* Bloque 2 */
+.F_bloq2 {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Segunda fila con el texto centrado */
+.F_bloq3 {
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(94, 94, 94);
+    width: 100%;
+}
+.F_bloq3 h4 {
+    font-size: 19px;
+}
+
+
+/*--------------------TIPOGRAFIAS---------------------*/
+
+#hanalei-fill-regulra {
+    font-family: "Hanalei Fill", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.reggae-one-regular {
+    font-family: "Reggae One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }

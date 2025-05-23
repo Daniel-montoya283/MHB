@@ -37,9 +37,11 @@ if (isset($_POST['login'])) {
             $_SESSION['email'] = $user['email'];
 
             if ($user['role'] === 'reclutador') {
-                header("Location: /MHB/inicio.php");
-            } else {
+                header("Location: /MHB/reclutador.php");
+            } else if ($user['role'] === 'candidato') { 
                 header("Location: /MHB/Candidato.php");
+            } else if ($user['role'] === 'influencer') {
+                header("Location: /MHB/influencer.php");
             }
             exit();
         }

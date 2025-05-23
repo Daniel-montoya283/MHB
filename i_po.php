@@ -13,10 +13,10 @@ if (!isset($_SESSION['email'])) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Candidato</title>
+  <title>Influencer</title>
   <link rel="stylesheet" href="CSS/styles.css" />
   <link rel="stylesheet" href="CSS/inicio.css" />
-  
+  <link rel="stylesheet" href="CSS/i_po.css"> 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,19 +33,19 @@ if (!isset($_SESSION['email'])) {
   </header>
 
   <main>
-    <nav>
+      <nav>
       <div class="btn-cuenta">
         <img class="avatar" src="/MHB/media/cuenta.png" alt="">
         <h1 class="user_title"> <span><?= $_SESSION['name']; ?></span></h1>
       </div>
       <div class="acciones">
-        <a href="#"><button class="buttonP">Subir CV</button></a>
+        <a href="../MHB/influencer.php"><button class="buttonP">Inicio</button></a>
         <a href="index.html"><button onclick="window.location.href='/MHB/login/logout.php'" class="buttonP">Cerrar Sección</button></a>
       </div>
       
     </nav>
-      
-    <h2>Vacantes Disponibles</h2>
+      <h1 class="user_title">Bienvenido, <span><?= $_SESSION['name']; ?></span></h1>
+    <h2>Vacantes Disponibles para Promocionar</h2>
     <section class="job-listings">
       <div class="job-container">
         <div class="job-card">
@@ -53,28 +53,28 @@ if (!isset($_SESSION['email'])) {
           <p><strong>Empresa:</strong> Tech Solutions</p>
           <p><strong>Ubicación:</strong> Medellín, Colombia</p>
           <p><strong>Tipo de contrato:</strong> Tiempo completo</p>
-          <button>Ver más</button>
+          <button onclick="abrirModal()">Promocionar</button>
         </div>
         <div class="job-card">
           <h3>Diseñador Gráfico</h3>
           <p><strong>Empresa:</strong> Creativos S.A.</p>
           <p><strong>Ubicación:</strong> Remoto</p>
           <p><strong>Tipo de contrato:</strong> Freelance</p>
-          <button>Ver más</button>
+          <button onclick="abrirModal()">Promocionar</button>
         </div>
         <div class="job-card">
           <h3>Analista de Datos</h3>
           <p><strong>Empresa:</strong> DataCorp</p>
           <p><strong>Ubicación:</strong> Bogotá, Colombia</p>
           <p><strong>Tipo de contrato:</strong> Tiempo completo</p>
-          <button>Ver más</button>
+          <button onclick="abrirModal()">Promocionar</button>
         </div>
         <div class="job-card">
           <h3>Diseñador UX/UI</h3>
           <p><strong>Empresa:</strong> Creative Minds</p>
           <p><strong>Ubicación:</strong> Bogotá, Colombia</p>
           <p><strong>Tipo de contrato:</strong> Freelance</p>
-          <button>Ver más</button>
+          <button onclick="abrirModal()">Promocionar</button>
         </div>
 
         <div class="job-card">
@@ -82,7 +82,7 @@ if (!isset($_SESSION['email'])) {
           <p><strong>Empresa:</strong> DataCorp</p>
           <p><strong>Ubicación:</strong> Medellín, Colombia</p>
           <p><strong>Tipo de contrato:</strong> Tiempo completo</p>
-          <button>Ver más</button>
+          <button onclick="abrirModal()">Promocionar</button>
         </div>
 
         <div class="job-card">
@@ -90,7 +90,7 @@ if (!isset($_SESSION['email'])) {
           <p><strong>Empresa:</strong> SoftTech</p>
           <p><strong>Ubicación:</strong> Cali, Colombia</p>
           <p><strong>Tipo de contrato:</strong> Remoto</p>
-          <button>Ver más</button>
+          <button onclick="abrirModal()">Promocionar</button>
         </div>
 
         <div class="job-card">
@@ -98,7 +98,7 @@ if (!isset($_SESSION['email'])) {
           <p><strong>Empresa:</strong> SocialBuzz</p>
           <p><strong>Ubicación:</strong> Barranquilla, Colombia</p>
           <p><strong>Tipo de contrato:</strong> Medio tiempo</p>
-          <button>Ver más</button>
+          <button onclick="abrirModal()">Promocionar</button>
         </div>
 
         <div class="job-card">
@@ -106,7 +106,7 @@ if (!isset($_SESSION['email'])) {
           <p><strong>Empresa:</strong> CloudSecure</p>
           <p><strong>Ubicación:</strong> Medellín, Colombia</p>
           <p><strong>Tipo de contrato:</strong> Tiempo completo</p>
-          <button>Ver más</button>
+          <button onclick="abrirModal()">Promocionar</button>
         </div>
 
         <div class="job-card">
@@ -114,7 +114,7 @@ if (!isset($_SESSION['email'])) {
           <p><strong>Empresa:</strong> MarketPlus</p>
           <p><strong>Ubicación:</strong> Bogotá, Colombia</p>
           <p><strong>Tipo de contrato:</strong> Remoto</p>
-          <button>Ver más</button>
+          <button onclick="abrirModal()">Promocionar</button>
         </div>
 
         <div class="job-card">
@@ -122,7 +122,7 @@ if (!isset($_SESSION['email'])) {
           <p><strong>Empresa:</strong> IT Assist</p>
           <p><strong>Ubicación:</strong> Medellín, Colombia</p>
           <p><strong>Tipo de contrato:</strong> Temporal</p>
-          <button>Ver más</button>
+          <button onclick="abrirModal()">Promocionar</button>
         </div>
 
         <div class="job-card">
@@ -130,7 +130,7 @@ if (!isset($_SESSION['email'])) {
           <p><strong>Empresa:</strong> InnovateX</p>
           <p><strong>Ubicación:</strong> Cali, Colombia</p>
           <p><strong>Tipo de contrato:</strong> Tiempo completo</p>
-          <button>Ver más</button>
+          <button onclick="abrirModal()">Promocionar</button>
         </div>
 
         <div class="job-card">
@@ -138,14 +138,14 @@ if (!isset($_SESSION['email'])) {
           <p><strong>Empresa:</strong> ContentPro</p>
           <p><strong>Ubicación:</strong> Remoto</p>
           <p><strong>Tipo de contrato:</strong> Freelance</p>
-          <button>Ver más</button>
+          <button onclick="abrirModal()">Promocionar</button>
         </div>
         <div class="job-card">
           <h3>Chef Ejecutivo</h3>
           <p><strong>Empresa:</strong> Gourmet Delights</p>
           <p><strong>Ubicación:</strong> Medellín, Colombia</p>
           <p><strong>Tipo de contrato:</strong> Tiempo completo</p>
-          <button>Ver más</button>
+          <button onclick="abrirModal()">Promocionar</button>
         </div>
 
         <div class="job-card">
@@ -153,7 +153,7 @@ if (!isset($_SESSION['email'])) {
           <p><strong>Empresa:</strong> Colegio San José</p>
           <p><strong>Ubicación:</strong> Bogotá, Colombia</p>
           <p><strong>Tipo de contrato:</strong> Medio tiempo</p>
-          <button>Ver más</button>
+          <button onclick="abrirModal()">Promocionar</button>
         </div>
 
         <div class="job-card">
@@ -161,7 +161,7 @@ if (!isset($_SESSION['email'])) {
           <p><strong>Empresa:</strong> Tienda Éxito</p>
           <p><strong>Ubicación:</strong> Cali, Colombia</p>
           <p><strong>Tipo de contrato:</strong> Tiempo completo</p>
-          <button>Ver más</button>
+          <button onclick="abrirModal()">Promocionar</button>
         </div>
 
         <div class="job-card">
@@ -169,7 +169,7 @@ if (!isset($_SESSION['email'])) {
           <p><strong>Empresa:</strong> Clínica Vida</p>
           <p><strong>Ubicación:</strong> Barranquilla, Colombia</p>
           <p><strong>Tipo de contrato:</strong> Turnos rotativos</p>
-          <button>Ver más</button>
+          <button onclick="abrirModal()">Promocionar</button>
         </div>
 
         <div class="job-card">
@@ -177,7 +177,7 @@ if (!isset($_SESSION['email'])) {
           <p><strong>Empresa:</strong> Logística Express</p>
           <p><strong>Ubicación:</strong> Bucaramanga, Colombia</p>
           <p><strong>Tipo de contrato:</strong> Tiempo completo</p>
-          <button>Ver más</button>
+          <button>Promocionar</button>
         </div>
 
         <div class="job-card">
@@ -185,14 +185,14 @@ if (!isset($_SESSION['email'])) {
           <p><strong>Empresa:</strong> Trendy Wear</p>
           <p><strong>Ubicación:</strong> Medellín, Colombia</p>
           <p><strong>Tipo de contrato:</strong> Freelance</p>
-          <button>Ver más</button>
+          <button>Promocionar</button>
         </div>
         <div class="job-card">
           <h3>Videógrafo</h3>
           <p><strong>Empresa:</strong> Creative Studio</p>
           <p><strong>Ubicación:</strong> Barranquilla, Colombia</p>
           <p><strong>Tipo de contrato:</strong> Freelance</p>
-          <button>Ver más</button>
+          <button>Promocionar</button>
         </div>
 
         <div class="job-card">
@@ -200,11 +200,27 @@ if (!isset($_SESSION['email'])) {
           <p><strong>Empresa:</strong> SecureNet</p>
           <p><strong>Ubicación:</strong> Bogotá, Colombia</p>
           <p><strong>Tipo de contrato:</strong> Tiempo completo</p>
-          <button>Ver más</button>
+          <button>Promocionar</button>
         </div>
       </div>
     </section>
   </main>
+
+  <div id="modal-promocionar" class="modal">
+  <div class="modal-content">
+    <h2>Promocionar Vacante</h2>
+    <p>Selecciona la red social:</p>
+    <button class="facebook" onclick="promocionarEn('facebook')">Facebook</button>
+    <button class="twitter" onclick="promocionarEn('twitter')">X (Twitter)</button>
+    <button class="instagram" onclick="promocionarEn('instagram')">Instagram</button>
+    <button class="whatsapp" onclick="promocionarEn('whatsapp')">WhatsApp</button>
+    <br>
+    <button class="cancel" onclick="cerrarModal()">Cancelar</button>
+  </div>
+</div>
+
+
+
 
   <footer>
     <div class="footer-top">
@@ -233,6 +249,39 @@ if (!isset($_SESSION['email'])) {
   </footer>
 
   <script src="JS/main.js"></script>
+  <script>
+
+
+function promocionarEn(red) {
+  alert('Promocionando en: ' + red);
+  cerrarModal();
+}
+
+function abrirModal() {
+  const modal = document.getElementById('modal-promocionar');
+  modal.classList.add('modal-visible'); // Añade la clase que centra y muestra
+}
+
+function cerrarModal() {
+  const modal = document.getElementById('modal-promocionar');
+  modal.classList.remove('modal-visible'); // Remueve la clase
+}
+function promocionarEn(red) {
+  const redes = {
+    facebook: 'https://www.facebook.com/',
+    twitter: 'https://twitter.com/',
+    instagram: 'https://www.instagram.com/',
+    whatsapp: 'https://web.whatsapp.com/'
+  };
+  
+  if(redes[red]) {
+    window.open(redes[red], '_blank');
+  }
+  
+  cerrarModal();
+}
+
+  </script>
 </body>
 
 </html>

@@ -1,0 +1,76 @@
+.panel {
+    display: flex;
+    justify-content: center;
+    max-width: 90rem;
+    margin: 0 auto;
+}
+.cards {
+    background-color: #fff;
+    width: 100%;
+    padding: 35px 20px;
+    display: grid; 
+    grid-gap: 20px;
+    margin-right: 10px;
+    height: 50%;
+    display: flex;
+     
+}
+.cards .card {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
+}
+
+.icon-box img{
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 50px;
+    height: 50px;
+}
+.number {
+    font-size: 30px;
+    color:rgb(9, 46, 40);
+}
+.charts {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr;
+  grid-gap: 20px;
+  width: 100%;
+  padding: 20px;
+  padding-top: 0;
+}
+
+.chart1 {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  width: 100%;
+}
+.chart2 {
+  background: #fff;
+  padding: 20px; 
+  border-radius: 10px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  width: 100%;
+}
+/* #doughnut {
+    width: 100%;
+     height: 400px
+} */
+#doughnut-chart {
+    max-width: 53rem;
+ }
+#doughnut-chart canvas{
+    max-height: 31rem;
+    max-width: 50rem;
+
+}
+.charts-container {
+    margin-left: 74px;
+    margin-bottom: 5rem;
+}

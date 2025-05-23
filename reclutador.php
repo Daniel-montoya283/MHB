@@ -13,7 +13,7 @@ if (!isset($_SESSION['email'])) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inicio</title>
+  <title>Reclutador</title>
   <link rel="stylesheet" href="CSS/styles.css" />
   <link rel="stylesheet" href="CSS/inicio.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -32,15 +32,19 @@ if (!isset($_SESSION['email'])) {
   </header>
 
   <main>
-    <nav>
-      <a href="Candidato.php"><button class="buttonP">Candidato</button></a>
-      <a href="Administracion.html"><button class="buttonP">Administrador</button></a>
-      <a href="P_influencer.html"><button class="buttonP">Influencer</button></a>
-      <a href="../MHB/CRUD/index.html"><button class="buttonP">Reclutador</button></a>
-      <a href="index.html"><button onclick="window.location.href='/MHB/login/logout.php'" class="buttonP">Cerrar Sección</button></a>
+      <nav>
+      <div class="btn-cuenta">
+        <img class="avatar" src="/MHB/media/cuenta.png" alt="">
+        <h1 class="user_title"> <span><?= $_SESSION['name']; ?></span></h1>
+      </div>
+      <div class="acciones">
+        <a href="../MHB/CRUD/index.php"><button class="buttonP">Crear Ofertas</button></a>
+        <a href="index.html"><button onclick="window.location.href='/MHB/login/logout.php'" class="buttonP">Cerrar Sección</button></a>
+      </div>
+      
     </nav>
       <h1 class="user_title">Bienvenido, <span><?= $_SESSION['name']; ?></span></h1>
-    <h2>Vacantes Disponibles</h2>
+    <h2>Vacantes Publicadas</h2>
     <section class="job-listings">
       <div class="job-container">
         <div class="job-card">

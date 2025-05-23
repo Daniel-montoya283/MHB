@@ -1,0 +1,117 @@
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex; /* Añadido */
+    justify-content: center; /* Añadido */
+    align-items: center; /* Añadido */
+    backdrop-filter: blur(3px);
+  }
+  #modal-promocionar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  backdrop-filter: blur(3px);
+}
+
+/* Clase adicional para centrar cuando esté visible */
+#modal-promocionar.modal-visible {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
+  
+  .modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.3s ease-out;
+    margin: 20px; /* Añadido para espacio en móviles */
+  }
+
+  /* El resto del CSS permanece igual */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .modal-content h2 {
+    margin-top: 0;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .modal-content p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+  
+  /* Estilos de los botones */
+  .modal-content button {
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    margin: 0.5rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    min-width: 120px;
+  }
+  
+  /* Botones de redes sociales */
+  .facebook {
+    background-color: #1877F2;
+    color: white;
+  }
+  
+  .twitter {
+    background-color: #000000;
+    color: white;
+  }
+  
+  .instagram {
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+    color: white;
+  }
+  
+  .whatsapp {
+    background-color: #25D366;
+    color: white;
+  }
+  
+  /* Botón de cancelar */
+  .cancel {
+    background-color: transparent;
+    color: #666;
+    border: 1px solid #ddd;
+    margin-top: 1.5rem;
+  }
+  
+  /* Efectos hover */
+  button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cancel:hover {
+    background-color: #f5f5f5;
+  }

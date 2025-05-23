@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+if (!isset($_SESSION['email'])) {
+  header("Location: /MHB/index.html");
+  exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -12,7 +21,11 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <link rel="stylesheet" href="../CSS/inicio.css">
     <link rel="stylesheet" href="assets/css/home.css" />
+    <link rel="stylesheet" href="../CSS/reclutador.css" />
+    
 
     <!--Libreria para alertas-->
     <link rel="stylesheet" href="assets/alerts/css/iziToast.min.css" />
@@ -31,12 +44,16 @@
         </div>
         <h1 style="color: black; margin-bottom: 10.5rem">1</h1>
     </header>
-      <nav>
-        <a href="../Inicio.php"><button class="buttonP">Inicio</button></a>
-        <a href="../Candidato.html"><button class="buttonP">Candidato</button></a>
-        <a href="../Administracion.html"><button class="buttonP">Administrador</button></a>
-        <a href="../P_influencer.html"><button class="buttonP">Influencer</button></a>
-        <a href="../index.html"><button onclick="window.location.href='/MHB/login/logout.php'" class="buttonP">Cerrar Sección</button></a>
+       <nav>
+      <div class="btn-cuenta">
+        <img class="avatar" src="/MHB/media/cuenta.png" alt="">
+        <h1 class="user_title"> <span><?= $_SESSION['name']; ?></span></h1>
+      </div>
+      <div class="acciones">
+        <a href="../reclutador.php"><button class="buttonP">Inicio</button></a>
+        <a ><button onclick="window.location.href='/MHB/login/logout.php'" class="buttonP">Cerrar Sección</button></a>
+      </div>
+      
     </nav>
     </section>
 
